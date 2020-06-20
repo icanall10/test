@@ -21,8 +21,6 @@ class DatabaseService {
 
 
      static migrate(Database db, int oldVersion, int newVersion) async {
-          if (newVersion == 0) return;
-
           for (var i = oldVersion; i <= newVersion - 1; i++) {
                await db.execute(migrations[i]);
           }
