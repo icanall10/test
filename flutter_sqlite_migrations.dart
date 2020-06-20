@@ -39,6 +39,6 @@ class DatabaseService {
                },
                onUpgrade: (Database db, int oldVersion, int newVersion) async {
                     migrate(db, oldVersion, newVersion);
-               });;
+               });
      }
 }
